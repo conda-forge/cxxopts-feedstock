@@ -1,6 +1,6 @@
 {% set name = "cxxopts" %}
-{% set version = "1.4.0" %}
-{% set sha256 = "60d4a482ec603ef4efa2603978596716884b33e24d39af6ddca52b4a30f7107b" %}
+{% set version = "1.4.1" %}
+{% set sha256 = "c5ccfe99bd3db0604d077c968b39a42d61333a64d171fe84d7037d6c0dcc996d" %}
 
 package:
   name: {{ name|lower }}
