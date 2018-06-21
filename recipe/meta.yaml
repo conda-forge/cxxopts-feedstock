@@ -10,7 +10,7 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/jarro2783/cxxopts/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patch:
+  patches:
     - 0001-Fixup-integer-pattern-multiple-definition.patch
 
 build:
@@ -18,8 +18,9 @@ build:
 
 requirements:
   build:
-    - toolchain
     - cmake
+    - {{ compiler('cxx') }}
+  host:
 
 test:
   commands:
