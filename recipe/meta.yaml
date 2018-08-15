@@ -1,6 +1,6 @@
 {% set name = "cxxopts" %}
-{% set version = "1.4.1" %}
-{% set sha256 = "c5ccfe99bd3db0604d077c968b39a42d61333a64d171fe84d7037d6c0dcc996d" %}
+{% set version = "2.1.1" %}
+{% set sha256 = "e19216251427d04f0273e6487c0246ae2dbb4154bf178f43896af8fa1ef89f3f" %}
 
 package:
   name: {{ name|lower }}
@@ -10,17 +10,24 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/jarro2783/cxxopts/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - 0001-Fixup-integer-pattern-multiple-definition.patch
 
 build:
-  number: 2
+  number: 0
+  skip: true  # [win and vc<14]
+  # The cxxopts library is header only, so we do not need
+  # to export the compiler run-time libraries.
+  # They are just needed during the build to perform some checks.
+  ignore_run_exports:
+    - libcxx
+    - libgcc-ng
+    - libstdcxx-ng
+    - vc
+    - vs2015_runtime
 
 requirements:
   build:
     - cmake
     - {{ compiler('cxx') }}
-  host:
 
 test:
   commands:
