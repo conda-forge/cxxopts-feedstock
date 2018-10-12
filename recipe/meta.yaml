@@ -25,7 +25,6 @@ build:
     - vs2015_runtime
 
 requirements:
-  host: []
   build:
     - cmake
     - {{ compiler('cxx') }}
