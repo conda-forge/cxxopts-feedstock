@@ -1,6 +1,6 @@
 {% set name = "cxxopts" %}
-{% set version = "2.1.2" %}
-{% set sha256 = "95f524c6615a2067e935e02ef74b013b17efa339df0a3c9db3e91fc0afbaf269" %}
+{% set version = "2.2.0" %}
+{% set sha256 = "447dbfc2361fce9742c5d1c9cfb25731c977b405f9085a738fbd608626da8a4d" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   skip: true  # [win and vc<14]
   # The cxxopts library is header only, so we do not need
   # to export the compiler run-time libraries.
