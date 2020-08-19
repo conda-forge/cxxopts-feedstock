@@ -1,6 +1,6 @@
 {% set name = "cxxopts" %}
-{% set version = "2.2.0" %}
-{% set sha256 = "447dbfc2361fce9742c5d1c9cfb25731c977b405f9085a738fbd608626da8a4d" %}
+{% set version = "2.2.1" %}
+{% set sha256 = "984aa3c8917d649b14d7f6277104ce38dd142ce378a9198ec926f03302399681" %}
 
 package:
   name: {{ name|lower }}
@@ -43,8 +43,8 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A lightweight C++ option parser library'
-  description: 'This is a lightweight C++ option parser library, supporting the standard GNU style syntax for options.'
+  summary: A lightweight C++ option parser library
+  description: This is a lightweight C++ option parser library, supporting the standard GNU style syntax for options.
   doc_url: https://github.com/jarro2783/cxxopts
   dev_url: https://github.com/jarro2783/cxxopts
 
