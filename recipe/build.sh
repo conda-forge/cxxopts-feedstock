@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ex
 
-cmake -DCMAKE_INSTALL_PREFIX=$PREFIX $SRC_DIR
+cmake $CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=$PREFIX $SRC_DIR
 make install
