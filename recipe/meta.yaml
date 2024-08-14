@@ -1,19 +1,15 @@
-{% set name = "cxxopts" %}
 {% set version = "3.2.1" %}
-{% set sha256 = "841f49f2e045b9c6365997c2a8fbf76e6f215042dda4511a5bb04bc5ebc7f88a" %}
 
 package:
-  name: {{ name|lower }}
+  name: cxxopts
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/jarro2783/cxxopts/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 841f49f2e045b9c6365997c2a8fbf76e6f215042dda4511a5bb04bc5ebc7f88a
 
 build:
   number: 1
-  skip: true  # [win and vc<14]
   # The cxxopts library is header only, so we do not need
   # to export the compiler run-time libraries.
   # They are just needed during the build to perform some checks.
